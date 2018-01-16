@@ -13,11 +13,21 @@ public class AemCredentials {
         this.replicatorCredentials = replicatorCredentials;
     }
     
+    public AemCredentials withReplicatorCredentials(UserPasswordCredentials replicatorCredentials) {
+        this.setReplicatorCredentials(replicatorCredentials);
+        return this;
+    }
+
     public UserPasswordCredentials getOrchestratorCredentials() {
         return orchestratorCredentials;
     }
 
     public void setOrchestratorCredentials(UserPasswordCredentials orchestratorCredentials) {
         this.orchestratorCredentials = orchestratorCredentials;
+    }
+    
+    public AemCredentials withOrchestratorCredentials(UserPasswordCredentials orchestratorCredentials) {
+        this.setOrchestratorCredentials(orchestratorCredentials);
+        return this;
     }
 }
